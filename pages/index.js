@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <h1>Hello, World!</h1>
-      <button type="button" class="btn btn-primary">マイナンバーカードに接続</button>
+      <a href="" class="btn btn-border">マイナンバーカードに接続</a>
     </div>
   )
 }
