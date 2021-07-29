@@ -119,3 +119,12 @@
     flex-direction: column;
   }
 }
+
+
+.box {
+  background-color: white;
+  width:60%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 30px;
+}

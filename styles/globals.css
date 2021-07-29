@@ -4,6 +4,7 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: #eee;
 }
 
 a {
@@ -48,4 +49,22 @@ a.btn-border {
 a.btn-border:hover {
   color: #fff;
   background: #000;
+}
+
+header {
+  display: flex;
+  width: 100%;
+  height: 100px;
+  background-color: darkgrey;
+  align-items: center;
+}
+ 
+.title {
+  margin-right: auto;
+}
+ 
+.menu {
+  list-style: none;
+  display: inline-block;
+  padding: 10px;
 }
