@@ -1,0 +1,41 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-width: 0;
+}
+.freeBox__xbUf {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+.freeBox__p9Oys {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  padding: 2px;
+  margin: 0px;
+}
+.slotTitle {
+  font-size: 14px;
+}
+.textbox {
+  position: relative;
+  width: 100%;
+  font-size: 22px;
+  box-shadow: 0px 1px 3px 1px #0000000d;
+  min-width: 0;
+  border-radius: 5px;
+  padding: 6px;
+  border: 1px solid #9e9d9b4d;
+}
+.root:focus-within .textbox {
+  outline: none;
+  border-color: #ed7a4d /* plasmic-token: o-T2xOiR9 */;
+}

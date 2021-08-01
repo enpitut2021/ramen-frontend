@@ -1,0 +1,394 @@
+{
+  "platform": "nextjs",
+  "code": {
+    "lang": "ts",
+    "scheme": "blackbox",
+    "reactRuntime": "classic"
+  },
+  "style": {
+    "scheme": "css-modules",
+    "defaultStyleCssFilePath": "plasmic/plasmic__default_style.module.css"
+  },
+  "images": {
+    "scheme": "public-files",
+    "publicDir": "../public",
+    "publicUrlPrefix": "/"
+  },
+  "tokens": {
+    "scheme": "theo",
+    "tokensFilePath": "plasmic-tokens.theo.json"
+  },
+  "srcDir": "components",
+  "defaultPlasmicDir": "./plasmic",
+  "projects": [
+    {
+      "projectId": "7CKZhD2BVpe8oYNyjz4EUo",
+      "projectName": "dapp-rta-vote",
+      "version": "latest",
+      "cssFilePath": "plasmic/dapp_rta_vote/plasmic_dapp_rta_vote.module.css",
+      "components": [
+        {
+          "id": "bnO-AW974wUz",
+          "name": "TabPage",
+          "type": "managed",
+          "projectId": "7CKZhD2BVpe8oYNyjz4EUo",
+          "renderModuleFilePath": "plasmic/dapp_rta_vote/PlasmicTabPage.tsx",
+          "importSpec": {
+            "modulePath": "TabPage.tsx"
+          },
+          "cssFilePath": "plasmic/dapp_rta_vote/PlasmicTabPage.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "4sUtTUrWnT",
+          "name": "Tab",
+          "type": "managed",
+          "projectId": "7CKZhD2BVpe8oYNyjz4EUo",
+          "renderModuleFilePath": "plasmic/dapp_rta_vote/PlasmicTab.tsx",
+          "importSpec": {
+            "modulePath": "Tab.tsx"
+          },
+          "cssFilePath": "plasmic/dapp_rta_vote/PlasmicTab.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "ntX9agb1NR",
+          "name": "Start",
+          "type": "managed",
+          "projectId": "7CKZhD2BVpe8oYNyjz4EUo",
+          "renderModuleFilePath": "plasmic/dapp_rta_vote/PlasmicStart.tsx",
+          "importSpec": {
+            "modulePath": "../pages/start.tsx"
+          },
+          "cssFilePath": "plasmic/dapp_rta_vote/PlasmicStart.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
+        },
+        {
+          "id": "8ig3uWjRld",
+          "name": "Input",
+          "type": "managed",
+          "projectId": "7CKZhD2BVpe8oYNyjz4EUo",
+          "renderModuleFilePath": "plasmic/dapp_rta_vote/PlasmicInput.tsx",
+          "importSpec": {
+            "modulePath": "Input.tsx"
+          },
+          "cssFilePath": "plasmic/dapp_rta_vote/PlasmicInput.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "sdZdmGowFd",
+          "name": "Button",
+          "type": "managed",
+          "projectId": "7CKZhD2BVpe8oYNyjz4EUo",
+          "renderModuleFilePath": "plasmic/dapp_rta_vote/PlasmicButton.tsx",
+          "importSpec": {
+            "modulePath": "Button.tsx"
+          },
+          "cssFilePath": "plasmic/dapp_rta_vote/PlasmicButton.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "JHk19r9QqJ",
+          "name": "Vote",
+          "type": "managed",
+          "projectId": "7CKZhD2BVpe8oYNyjz4EUo",
+          "renderModuleFilePath": "plasmic/dapp_rta_vote/PlasmicVote.tsx",
+          "importSpec": {
+            "modulePath": "../pages/vote.tsx"
+          },
+          "cssFilePath": "plasmic/dapp_rta_vote/PlasmicVote.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
+        },
+        {
+          "id": "4Bd4Yhsd_bl",
+          "name": "StackPage",
+          "type": "managed",
+          "projectId": "7CKZhD2BVpe8oYNyjz4EUo",
+          "renderModuleFilePath": "plasmic/dapp_rta_vote/PlasmicStackPage.tsx",
+          "importSpec": {
+            "modulePath": "StackPage.tsx"
+          },
+          "cssFilePath": "plasmic/dapp_rta_vote/PlasmicStackPage.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "CYSztTUGQI",
+          "name": "Share",
+          "type": "managed",
+          "projectId": "7CKZhD2BVpe8oYNyjz4EUo",
+          "renderModuleFilePath": "plasmic/dapp_rta_vote/PlasmicShare.tsx",
+          "importSpec": {
+            "modulePath": "../pages/share/[tx].tsx"
+          },
+          "cssFilePath": "plasmic/dapp_rta_vote/PlasmicShare.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
+        },
+        {
+          "id": "vVq_ENM8si",
+          "name": "Ballot",
+          "type": "managed",
+          "projectId": "7CKZhD2BVpe8oYNyjz4EUo",
+          "renderModuleFilePath": "plasmic/dapp_rta_vote/PlasmicBallot.tsx",
+          "importSpec": {
+            "modulePath": "../pages/ballot/[tx].tsx"
+          },
+          "cssFilePath": "plasmic/dapp_rta_vote/PlasmicBallot.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
+        }
+      ],
+      "icons": [],
+      "images": [],
+      "codeComponents": [],
+      "projectApiToken": "oE1bH0wkQ7scNOqjRsxC0rOdWKaYlIVmuEq8xJOsepD9u6MgFDsgdyvdXJXbKOYKOL7u03fyNPf6wBpWeA"
+    },
+    {
+      "projectId": "6YWbAhS5tQQRFkLE21F4kw",
+      "projectName": "myna-dapp",
+      "version": "latest",
+      "cssFilePath": "plasmic/myna_dapp/plasmic_myna_dapp.module.css",
+      "components": [
+        {
+          "id": "tVOp-FjEQX",
+          "name": "Landing",
+          "type": "managed",
+          "projectId": "6YWbAhS5tQQRFkLE21F4kw",
+          "renderModuleFilePath": "plasmic/myna_dapp/PlasmicLanding.tsx",
+          "importSpec": {
+            "modulePath": "../pages/index.tsx"
+          },
+          "cssFilePath": "plasmic/myna_dapp/PlasmicLanding.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
+        },
+        {
+          "id": "syT_kopKCz",
+          "name": "Login",
+          "type": "managed",
+          "projectId": "6YWbAhS5tQQRFkLE21F4kw",
+          "renderModuleFilePath": "plasmic/myna_dapp/PlasmicLogin.tsx",
+          "importSpec": {
+            "modulePath": "../pages/login.tsx"
+          },
+          "cssFilePath": "plasmic/myna_dapp/PlasmicLogin.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
+        },
+        {
+          "id": "i0iE4QV40D",
+          "name": "Send",
+          "type": "managed",
+          "projectId": "6YWbAhS5tQQRFkLE21F4kw",
+          "renderModuleFilePath": "plasmic/myna_dapp/PlasmicSend.tsx",
+          "importSpec": {
+            "modulePath": "../pages/send.tsx"
+          },
+          "cssFilePath": "plasmic/myna_dapp/PlasmicSend.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
+        },
+        {
+          "id": "SDiudT27JW",
+          "name": "Receive",
+          "type": "managed",
+          "projectId": "6YWbAhS5tQQRFkLE21F4kw",
+          "renderModuleFilePath": "plasmic/myna_dapp/PlasmicReceive.tsx",
+          "importSpec": {
+            "modulePath": "../pages/receive.tsx"
+          },
+          "cssFilePath": "plasmic/myna_dapp/PlasmicReceive.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
+        },
+        {
+          "id": "aUeHhqhSJm",
+          "name": "Button",
+          "type": "managed",
+          "projectId": "6YWbAhS5tQQRFkLE21F4kw",
+          "renderModuleFilePath": "plasmic/myna_dapp/PlasmicButton.tsx",
+          "importSpec": {
+            "modulePath": "Button.tsx"
+          },
+          "cssFilePath": "plasmic/myna_dapp/PlasmicButton.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "kMmJWCRMpfj",
+          "name": "Button2",
+          "type": "managed",
+          "projectId": "6YWbAhS5tQQRFkLE21F4kw",
+          "renderModuleFilePath": "plasmic/myna_dapp/PlasmicButton2.tsx",
+          "importSpec": {
+            "modulePath": "Button2.tsx"
+          },
+          "cssFilePath": "plasmic/myna_dapp/PlasmicButton2.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "AyLRBt0RFN",
+          "name": "Balance",
+          "type": "managed",
+          "projectId": "6YWbAhS5tQQRFkLE21F4kw",
+          "renderModuleFilePath": "plasmic/myna_dapp/PlasmicBalance.tsx",
+          "importSpec": {
+            "modulePath": "../pages/balance.tsx"
+          },
+          "cssFilePath": "plasmic/myna_dapp/PlasmicBalance.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
+        }
+      ],
+      "icons": [],
+      "images": [
+        {
+          "id": "Es2o5vVEm",
+          "name": "qr.png",
+          "filePath": "../public/plasmic/myna_dapp/images/qrpng.png"
+        },
+        {
+          "id": "USFgeym_j",
+          "name": "2691894_m.jpg",
+          "filePath": "../public/plasmic/myna_dapp/images/_2691894Mjpg.jpeg"
+        },
+        {
+          "id": "0VefidGMM",
+          "name": "food_ramen.png",
+          "filePath": "../public/plasmic/myna_dapp/images/foodRamenpng.png"
+        },
+        {
+          "id": "cCPimzhk1",
+          "name": "スクリーンショット 2021-07-30 16.38.09.png",
+          "filePath": "../public/plasmic/myna_dapp/images/スクリンショット20210730163809Png.png"
+        },
+        {
+          "id": "cHshr49ig",
+          "name": "スクリーンショット 2021-07-30 13.50.30.png",
+          "filePath": "../public/plasmic/myna_dapp/images/スクリンショット20210730135030Png.png"
+        },
+        {
+          "id": "m-BXLUBbZ",
+          "name": "367_ext_01_0.png",
+          "filePath": "../public/plasmic/myna_dapp/images/_367Ext010Png.png"
+        },
+        {
+          "id": "1y7FPJy_W",
+          "name": "2691894_m.jpg 2",
+          "filePath": "../public/plasmic/myna_dapp/images/_2691894Mjpg2.jpeg"
+        },
+        {
+          "id": "u6zbz5it3",
+          "name": "ramen.jpg",
+          "filePath": "../public/plasmic/myna_dapp/images/ramenjpg.jpeg"
+        },
+        {
+          "id": "8kCC5WRMN",
+          "name": "bg-pattern.png",
+          "filePath": "../public/plasmic/myna_dapp/images/bgPatternpng.png"
+        },
+        {
+          "id": "RsSS97agl",
+          "name": "check2.png",
+          "filePath": "../public/plasmic/myna_dapp/images/check2Png.png"
+        },
+        {
+          "id": "ADp7VAvuU",
+          "name": "check1.png",
+          "filePath": "../public/plasmic/myna_dapp/images/check1Png.png"
+        },
+        {
+          "id": "BID4rhD3D",
+          "name": "balance.png",
+          "filePath": "../public/plasmic/myna_dapp/images/balancepng.png"
+        },
+        {
+          "id": "XOZRVysUp",
+          "name": "3643751-craft-go-paper-plane-send-start_113443.png",
+          "filePath": "../public/plasmic/myna_dapp/images/_3643751CraftGoPaperPlaneSendStart113443Png.png"
+        },
+        {
+          "id": "TYEvUoR-U",
+          "name": "send.png",
+          "filePath": "../public/plasmic/myna_dapp/images/sendpng.png"
+        },
+        {
+          "id": "Qh9oporPI",
+          "name": "wondicon-ui-free-send_111204.png",
+          "filePath": "../public/plasmic/myna_dapp/images/wondiconUiFreeSend111204Png.png"
+        },
+        {
+          "id": "79hQfgNtM",
+          "name": "receive.png",
+          "filePath": "../public/plasmic/myna_dapp/images/receivepng.png"
+        },
+        {
+          "id": "NZb33Sdd1",
+          "name": "send.png 2",
+          "filePath": "../public/plasmic/myna_dapp/images/sendpng2.png"
+        },
+        {
+          "id": "TWy6dBGXF",
+          "name": "home.png",
+          "filePath": "../public/plasmic/myna_dapp/images/homepng.png"
+        },
+        {
+          "id": "CZDqBGyAC",
+          "name": "image1.png",
+          "filePath": "../public/plasmic/myna_dapp/images/image1Png.png"
+        },
+        {
+          "id": "8mCcaj3us",
+          "name": "スクリーンショット 2021-08-01 18.15.34.png",
+          "filePath": "../public/plasmic/myna_dapp/images/スクリンショット20210801181534Png.png"
+        },
+        {
+          "id": "Mm2_qSAWD",
+          "name": "image2.jpg",
+          "filePath": "../public/plasmic/myna_dapp/images/image2Jpg.jpeg"
+        },
+        {
+          "id": "RkQDK0bFO",
+          "name": "image4.jpg",
+          "filePath": "../public/plasmic/myna_dapp/images/image4Jpg.jpeg"
+        },
+        {
+          "id": "5CEiLdWui",
+          "name": "login.png",
+          "filePath": "../public/plasmic/myna_dapp/images/loginpng.png"
+        }
+      ],
+      "codeComponents": [],
+      "projectApiToken": "hLliXNsc6PHGEDCUpx7b83MGG7qNMTLFg4JpxCcXLcRD3mUO88s1lC1LbtBy2XfAyuYFnasY4qCI2rR00R4g"
+    }
+  ],
+  "globalVariants": {
+    "variantGroups": [
+      {
+        "id": "tId95ECdAsJK",
+        "name": "Screen",
+        "projectId": "7CKZhD2BVpe8oYNyjz4EUo",
+        "contextFilePath": "plasmic/dapp_rta_vote/PlasmicGlobalVariant__Screen.tsx"
+      },
+      {
+        "id": "FMUrbbttkcp2",
+        "name": "Screen",
+        "projectId": "6YWbAhS5tQQRFkLE21F4kw",
+        "contextFilePath": "plasmic/myna_dapp/PlasmicGlobalVariant__Screen.tsx"
+      }
+    ]
+  },
+  "nextjsConfig": {
+    "pagesDir": "../pages"
+  },
+  "cliVersion": "0.1.158",
+  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.158/dist/plasmic.schema.json"
+}
