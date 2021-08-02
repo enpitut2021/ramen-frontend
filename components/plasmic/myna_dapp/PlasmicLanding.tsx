@@ -127,7 +127,7 @@ function PlasmicLanding__RenderFunc(props: {
                     sty.link
                   )}
                   component={Link}
-                  href={"/balance" as const}
+                  href={"/login" as const}
                   platform={"nextjs"}
                 >
                   {"マイナンバーカードに接続"}

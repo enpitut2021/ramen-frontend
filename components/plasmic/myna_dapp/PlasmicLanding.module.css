@@ -7,6 +7,11 @@
   min-width: 0;
   min-height: 0;
 }
+@media (min-width: 0px) and (max-width: 768px) {
+  .root {
+    opacity: 1;
+  }
+}
 .freeBox__aasAw {
   display: flex;
   flex-direction: column;
@@ -108,9 +113,7 @@
   flex-direction: column;
   align-items: stretch;
   justify-content: flex-start;
-  transition-property: all;
-  transition-duration: 1s;
-  overflow: visible;
+  overflow: auto;
   align-self: auto;
   padding: 0px;
 }
@@ -130,7 +133,7 @@
   align-items: center;
   justify-content: center;
   align-content: unset;
-  background: linear-gradient(#ffffff, #ffffff), #1e1803;
+  background: #ffffff;
 }
 .freeBox___4X7EK {
   display: flex;
@@ -198,9 +201,7 @@
   flex-direction: column;
   align-items: stretch;
   justify-content: flex-start;
-  background: linear-gradient(#d4ecf4, #d4ecf4),
-    linear-gradient(#a8e8e8, #a8e8e8), linear-gradient(#000000, #000000),
-    #f4f4f4;
+  background: #d4ecf4;
   padding: 100px 150px;
 }
 @media (min-width: 0px) and (max-width: 768px) {
@@ -240,8 +241,7 @@
   flex-direction: column;
   align-items: stretch;
   justify-content: flex-start;
-  background: linear-gradient(#ffffff, #ffffff),
-    linear-gradient(#9bffe6, #9bffe6), #e6ff9b;
+  background: #ffffff;
   width: 48%;
   box-shadow: 2px 4px 4px 5px #00000026;
   height: 600px;
@@ -307,8 +307,7 @@
   flex-direction: column;
   align-items: stretch;
   justify-content: flex-start;
-  background: linear-gradient(#ffffff, #ffffff),
-    linear-gradient(#9bffe6, #9bffe6), #e6ff9b;
+  background: #ffffff;
   width: 48%;
   box-shadow: 2px 4px 4px 5px #00000026;
   height: 600px;
@@ -373,8 +372,7 @@
   flex-direction: column;
   align-items: stretch;
   justify-content: flex-start;
-  background: linear-gradient(#ffffff, #ffffff),
-    linear-gradient(#9bffe6, #9bffe6), #e6ff9b;
+  background: #ffffff;
   width: 48%;
   box-shadow: 2px 4px 4px 5px #00000026;
   height: 600px;
@@ -413,6 +411,8 @@
   object-fit: cover;
   height: 237px;
   align-self: center;
+  width: 100%;
+  min-width: 0;
   flex-shrink: 0;
   border-radius: 40px;
   margin: 0px 0px 20px;
@@ -438,8 +438,7 @@
   flex-direction: column;
   align-items: stretch;
   justify-content: flex-start;
-  background: linear-gradient(#ffffff, #ffffff),
-    linear-gradient(#9bffe6, #9bffe6), #e6ff9b;
+  background: #ffffff;
   width: 48%;
   box-shadow: 2px 4px 4px 5px #00000026;
   height: 600px;
@@ -510,7 +509,7 @@
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .freeBox__qYaw {
-    padding: 40px;
+    padding: 20px;
   }
 }
 .freeBox__eHo5U {
@@ -529,6 +528,7 @@
 @media (min-width: 0px) and (max-width: 768px) {
   .freeBox__eHo5U {
     width: 354px;
+    align-self: center;
     padding: 0px;
   }
 }
@@ -539,7 +539,7 @@
   align-items: center;
   justify-content: center;
   align-content: unset;
-  background: linear-gradient(#ffffff, #ffffff), #1e1803;
+  background: #ffffff;
 }
 .freeBox__ce3Ul {
   display: flex;
@@ -673,18 +673,16 @@
   font-size: 35px;
   color: #535353;
   text-align: left;
-  width: 563px;
+  width: 80%;
   align-self: flex-end;
-  flex-shrink: 0;
   padding: 0px;
   margin: 0px;
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .freeBox__cTgig {
     font-size: 16px;
-    width: 595px;
+    width: 80%;
     align-self: center;
-    flex-shrink: 0;
     margin: 0px;
   }
 }
@@ -724,8 +722,7 @@
   font-size: 35px;
   color: #535353;
   text-align: left;
-  width: 563px;
-  flex-shrink: 0;
+  width: 80%;
   padding: 0px;
   margin: 0px;
 }
@@ -734,6 +731,7 @@
     font-size: 16px;
     height: auto;
     align-self: center;
+    width: 80%;
     margin: 0px;
   }
 }

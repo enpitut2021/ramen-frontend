@@ -11,6 +11,7 @@
 // Plasmic Project: 6YWbAhS5tQQRFkLE21F4kw
 // Component: i0iE4QV40D
 import * as React from "react";
+import { useState, useEffect } from "react";
 
 import Head from "next/head";
 import Link, { LinkProps } from "next/link";
@@ -53,6 +54,8 @@ export const PlasmicSend__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicSend__OverridesType = {
   root?: p.Flex<"div">;
+  form?: p.Flex<"form">;
+  button?: p.Flex<"button">;
   send2?: p.Flex<"div">;
   send?: p.Flex<"div">;
 };
@@ -60,6 +63,11 @@ export type PlasmicSend__OverridesType = {
 export interface DefaultSendProps {
   dataFetches: PlasmicSend__Fetches;
 }
+
+
+
+
+
 
 function PlasmicSend__RenderFunc(props: {
   variants: PlasmicSend__VariantsArgs;
@@ -73,6 +81,40 @@ function PlasmicSend__RenderFunc(props: {
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariants()
   });
+  
+
+
+
+
+  // インターフェース
+  type IData = {
+    address: string,
+    amount: number
+  };
+  // 初期データ
+  const initialData: IData = {
+    address: '',
+    amount: 0,
+  };
+  // データ
+  const [data, setData] = useState<IData>(initialData);
+  
+  const handleChangeInput = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const value = event.target.value;
+    const name = event.target.name;
+    setData({ ...data, [name]: value });
+  }
+
+  function hoge():void{
+    console.log(data.address);
+    console.log(data.amount);
+  }
+
+
+
+
+
+
 
   return (
     <React.Fragment>
@@ -125,8 +167,10 @@ function PlasmicSend__RenderFunc(props: {
                 hasVariant(globalVariants, "screen", "mobileOnly") ? true : true
               ) ? (
                 <div className={classNames(defaultcss.all, sty.freeBox__hpOsG)}>
-                  <div
-                    className={classNames(defaultcss.all, sty.freeBox__aj15S)}
+                  <form
+                    data-plasmic-name={"form"}
+                    data-plasmic-override={overrides.form}
+                    className={classNames(defaultcss.all, sty.form)}
                   >
                     <div
                       className={classNames(
@@ -146,7 +190,9 @@ function PlasmicSend__RenderFunc(props: {
                       placeholder={"Address" as const}
                       size={1 as const}
                       type={"text" as const}
-                      value={"MRSrKUPyDPhfyQQnUJ9VuCHaojigpBqmfw" as const}
+                      value={data.address}
+                      name="address"
+                      onChange={handleChangeInput}
                     />
 
                     <div
@@ -170,7 +216,9 @@ function PlasmicSend__RenderFunc(props: {
                         placeholder={"Amount" as const}
                         size={1 as const}
                         type={"text" as const}
-                        value={"2.8448" as const}
+                        value={data.amount}
+                        name="amount"
+                        onChange={handleChangeInput}
                       />
 
                       <div
@@ -184,23 +232,24 @@ function PlasmicSend__RenderFunc(props: {
                       </div>
                     </div>
 
-                    <div
-                      className={classNames(defaultcss.all, sty.freeBox__ffbFo)}
+                    <button
+                      type="button"
+                      data-plasmic-name={"button"}
+                      data-plasmic-override={overrides.button}
+                      className={classNames(defaultcss.button, sty.button)}
+                      onClick={async () => hoge()}
                     >
-                      <p.PlasmicLink
+                      <div
                         className={classNames(
                           defaultcss.all,
                           defaultcss.__wab_text,
-                          sty.link__jy8Eq
+                          sty.freeBox__jy8Eq
                         )}
-                        component={Link}
-                        href={"https://www.plasmic.app/" as const}
-                        platform={"nextjs"}
                       >
                         {"Send"}
-                      </p.PlasmicLink>
-                    </div>
-                  </div>
+                      </div>
+                    </button>
+                  </form>
                 </div>
               ) : null}
             </div>
@@ -271,8 +320,6 @@ function PlasmicSend__RenderFunc(props: {
               </div>
             </div>
           </div>
-
-          <div className={classNames(defaultcss.all, sty.freeBox__iLz92)} />
         </div>
       </div>
     </React.Fragment>
@@ -280,7 +327,9 @@ function PlasmicSend__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "send2", "send"],
+  root: ["root", "form", "button", "send2", "send"],
+  form: ["form", "button"],
+  button: ["button"],
   send2: ["send2"],
   send: ["send"]
 } as const;
@@ -289,6 +338,8 @@ type DescendantsType<T extends NodeNameType> =
   typeof PlasmicDescendants[T][number];
 type NodeDefaultElementType = {
   root: "div";
+  form: "form";
+  button: "button";
   send2: "div";
   send: "div";
 };
@@ -354,6 +405,8 @@ export const PlasmicSend = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
+    form: makeNodeComponent("form"),
+    button: makeNodeComponent("button"),
     send2: makeNodeComponent("send2"),
     send: makeNodeComponent("send"),
 
