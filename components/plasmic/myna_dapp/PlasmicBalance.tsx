@@ -156,7 +156,7 @@ function PlasmicBalance__RenderFunc(props: {
                       sty.freeBox__jjibd
                     )}
                   >
-                    {"2.8448 ETH"}
+                    {"0 ETH"}
                   </div>
 
                   <div
@@ -166,7 +166,7 @@ function PlasmicBalance__RenderFunc(props: {
                       sty.freeBox__lLtmg
                     )}
                   >
-                    {"= 744,491 JPY"}
+                    {"= 0 JPY"}
                   </div>
                 </div>
               ) : null}

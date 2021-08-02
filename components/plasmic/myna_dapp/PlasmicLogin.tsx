@@ -15,6 +15,8 @@ import * as React from "react";
 import Head from "next/head";
 import Link, { LinkProps } from "next/link";
 
+import * as ethers from 'ethers';
+
 import * as p from "@plasmicapp/react-web";
 
 import {
@@ -55,12 +57,85 @@ export type PlasmicLogin__OverridesType = {
   root?: p.Flex<"div">;
   img?: p.Flex<"img">;
   残高?: p.Flex<"div">;
-  link?: p.Flex<"a"> & Partial<LinkProps>;
+  button?: p.Flex<"button">;
 };
 
 export interface DefaultLoginProps {
   dataFetches: PlasmicLogin__Fetches;
 }
+
+
+
+let accounts;
+let myContract;
+
+const ContractAbi = [ // solidityから持ってきたやつ
+  {
+      "inputs": [],
+      "name": "retrieve",
+      "outputs": [
+          {
+              "internalType": "string",
+              "name": "",
+              "type": "string"
+          }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+  },
+  {
+      "inputs": [
+          {
+              "internalType": "string",
+              "name": "msg_in",
+              "type": "string"
+          }
+      ],
+      "name": "store",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+  }
+];
+
+
+
+
+const ContractAddress = "0xAf763d8b60E51d646A77f0859cf6b1B65aF98af3"; // solidityから持ってきたやつ
+const isMetaMaskConnected = () => accounts && accounts.length > 0
+
+const isMetaMaskInstalled = () => { //metamaskがあるかの検証
+    const { ethereum } = window;
+    return Boolean(ethereum && ethereum.isMetaMask); //ethがあり、metamaskがあるか
+};
+
+const MetaMaskClientCheck = () => {
+  if (!isMetaMaskInstalled()) {
+      console.log("Please install MetaMask");
+  } else {
+
+      try {
+        const newAccounts = ethereum.request({
+            method: 'eth_requestAccounts', //アカウントへの接続を要求
+        });
+        accounts = newAccounts;
+        console.log(accounts);
+        if (isMetaMaskConnected()) { //もし繋がっていたら
+            const provider = new ethers.providers.Web3Provider(window.ethereum);
+            const signer = provider.getSigner(0);
+            myContract = new ethers.Contract(ContractAddress, ContractAbi, signer);
+            console.log(myContract);
+        }
+      } catch (error) {
+          console.error(error);
+      }
+  }
+};
+
+
+
+
+
 
 function PlasmicLogin__RenderFunc(props: {
   variants: PlasmicLogin__VariantsArgs;
@@ -157,30 +232,25 @@ function PlasmicLogin__RenderFunc(props: {
                     </div>
                   </div>
 
-                  <div
-                    className={classNames(defaultcss.all, sty.freeBox__sSbSg)}
+                  <button
+                  type="button"
+                    data-plasmic-name={"button"}
+                    data-plasmic-override={overrides.button}
+                    className={classNames(defaultcss.button, sty.button)}
+                    onClick={MetaMaskClientCheck}
                   >
-                    <p.PlasmicLink
-                      data-plasmic-name={"link"}
-                      data-plasmic-override={overrides.link}
+                    <div
                       className={classNames(
                         defaultcss.all,
                         defaultcss.__wab_text,
-                        sty.link
+                        sty.freeBox__m3Wix
                       )}
-                      component={Link}
-                      href={
-                        hasVariant(globalVariants, "screen", "mobileOnly")
-                          ? ("/balance" as const)
-                          : ("/balance" as const)
-                      }
-                      platform={"nextjs"}
                     >
                       {hasVariant(globalVariants, "screen", "mobileOnly")
                         ? "マイナンバーカードに接続"
                         : "マイナンバーカードに接続"}
-                    </p.PlasmicLink>
-                  </div>
+                    </div>
+                  </button>
 
                   <div
                     className={classNames(
@@ -202,10 +272,10 @@ function PlasmicLogin__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "img", "残高", "link"],
+  root: ["root", "img", "残高", "button"],
   img: ["img"],
   残高: ["残高"],
-  link: ["link"]
+  button: ["button"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -214,7 +284,7 @@ type NodeDefaultElementType = {
   root: "div";
   img: "img";
   残高: "div";
-  link: "a";
+  button: "button";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -280,7 +350,7 @@ export const PlasmicLogin = Object.assign(
     // Helper components rendering sub-elements
     img: makeNodeComponent("img"),
     残高: makeNodeComponent("残高"),
-    link: makeNodeComponent("link"),
+    button: makeNodeComponent("button"),
 
     // Metadata about props expected for PlasmicLogin
     internalVariantProps: PlasmicLogin__VariantProps,

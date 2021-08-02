@@ -233,7 +233,7 @@
     margin: 0px;
   }
 }
-.freeBox__sSbSg {
+.button {
   display: flex;
   position: relative;
   flex-direction: row;
@@ -251,7 +251,7 @@
   border: 5px solid #d4ecf4;
 }
 @media (min-width: 0px) and (max-width: 768px) {
-  .freeBox__sSbSg {
+  .button {
     width: 300px;
     height: 60px;
     display: flex;
@@ -268,7 +268,7 @@
     border: 5px solid #d4ecf4;
   }
 }
-.link {
+.freeBox__m3Wix {
   position: relative;
   text-align: center;
   color: #ffffff;
@@ -278,7 +278,7 @@
   letter-spacing: 2px;
 }
 @media (min-width: 0px) and (max-width: 768px) {
-  .link {
+  .freeBox__m3Wix {
     font-size: 16px;
     position: relative;
     text-align: center;

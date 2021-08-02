@@ -13,6 +13,8 @@
 import * as React from "react";
 import { useState, useEffect } from "react";
 
+import * as ethers from 'ethers';
+
 import Head from "next/head";
 import Link, { LinkProps } from "next/link";
 
@@ -64,7 +66,7 @@ export interface DefaultSendProps {
   dataFetches: PlasmicSend__Fetches;
 }
 
-
+declare const web3: any;
 
 
 
