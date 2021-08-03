@@ -1,0 +1,19 @@
+.root {
+  display: inline-flex;
+  flex-direction: column;
+  position: relative;
+  width: auto;
+  height: auto;
+}
+.freeBox {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+  background: linear-gradient(#e6ff9b, #e6ff9b), #ffcdcd;
+  box-shadow: 1px 1px 2px 0.5px #00000080;
+  border-radius: 23px;
+  padding: 10px;
+  border: 1px solid #00000012;
+}

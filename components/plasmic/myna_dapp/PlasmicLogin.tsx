@@ -15,8 +15,6 @@ import * as React from "react";
 import Head from "next/head";
 import Link, { LinkProps } from "next/link";
 
-import * as ethers from 'ethers';
-
 import * as p from "@plasmicapp/react-web";
 
 import {
@@ -66,8 +64,11 @@ export interface DefaultLoginProps {
 
 
 
+import * as ethers from 'ethers';
+
 let accounts;
 let myContract;
+
 
 const ContractAbi = [ // solidityから持ってきたやつ
   {
@@ -130,6 +131,24 @@ const MetaMaskClientCheck = async () => {
       }
   }
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -232,7 +251,6 @@ function PlasmicLogin__RenderFunc(props: {
                   </div>
 
                   <button
-                  type="button"
                     data-plasmic-name={"button"}
                     data-plasmic-override={overrides.button}
                     className={classNames(defaultcss.button, sty.button)}
