@@ -18,7 +18,7 @@ import Link, { LinkProps } from "next/link";
 
 import * as p from "@plasmicapp/react-web";
 //
-import { sendJPYC } from "../../../blockChaine";
+import { sendJPYC } from "../../blockChaine";
 
 import {
   hasVariant,
@@ -108,8 +108,7 @@ function PlasmicSend__RenderFunc(props: {
   }
 // get address and send
   function send():void{
-    console.log(data.address);
-    console.log(data.amount);
+    sendJPYC(data.address, data.amount);
   }
 
 
