@@ -21,6 +21,12 @@ function Send() {
   // variant context providers. These wrappers may be moved to
   // Next.js Custom App component
   // (https://nextjs.org/docs/advanced-features/custom-app).
+
+
+  // format
+  // addressとvalueを引き出す
+  // sendボタンを押すと
+  // 値を
   return <PlasmicSend />;
 }
 

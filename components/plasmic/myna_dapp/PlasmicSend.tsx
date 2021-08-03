@@ -17,6 +17,8 @@ import Head from "next/head";
 import Link, { LinkProps } from "next/link";
 
 import * as p from "@plasmicapp/react-web";
+//
+import { sendJPYC } from "../../../blockChaine";
 
 import {
   hasVariant,
@@ -104,8 +106,8 @@ function PlasmicSend__RenderFunc(props: {
     const name = event.target.name;
     setData({ ...data, [name]: value });
   }
-
-  function hoge():void{
+// get address and send
+  function send():void{
     console.log(data.address);
     console.log(data.amount);
   }
@@ -237,7 +239,7 @@ function PlasmicSend__RenderFunc(props: {
                       data-plasmic-name={"button"}
                       data-plasmic-override={overrides.button}
                       className={classNames(defaultcss.button, sty.button)}
-                      onClick={async () => hoge()}
+                      onClick={async () => send()}
                     >
                       <div
                         className={classNames(
