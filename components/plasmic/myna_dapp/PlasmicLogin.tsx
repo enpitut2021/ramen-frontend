@@ -109,17 +109,16 @@ const isMetaMaskInstalled = () => { //metamaskがあるかの検証
     return Boolean(ethereum && ethereum.isMetaMask); //ethがあり、metamaskがあるか
 };
 
-const MetaMaskClientCheck = () => {
+const MetaMaskClientCheck = async () => {
   if (!isMetaMaskInstalled()) {
       console.log("Please install MetaMask");
   } else {
 
       try {
-        const newAccounts = ethereum.request({
+        const newAccounts = await ethereum.request({
             method: 'eth_requestAccounts', //アカウントへの接続を要求
         });
         accounts = newAccounts;
-        console.log(accounts);
         if (isMetaMaskConnected()) { //もし繋がっていたら
             const provider = new ethers.providers.Web3Provider(window.ethereum);
             const signer = provider.getSigner(0);
